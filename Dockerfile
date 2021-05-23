@@ -1,5 +1,6 @@
 FROM maven:3.6.0-jdk-11-slim AS build
 COPY src /home/app/src
+COPY soapService.wsdl /home/app/
 COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package
 
@@ -11,6 +12,6 @@ ENV server.port=9081
 
 RUN mkdir /app
 WORKDIR /app
-COPY --from=build /home/app/target/starter-kit.jar /app/starter-kit.jar
+COPY --from=build /home/app/target/java-cup.jar /app/java-cup.jar
 EXPOSE 9081
-ENTRYPOINT ["java", "-jar", "/app/starter-kit.jar"]
+ENTRYPOINT ["java", "-jar", "/app/java-cup.jar"]

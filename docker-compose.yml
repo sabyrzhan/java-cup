@@ -1,0 +1,11 @@
+version: "3"
+services:
+  javacup:
+    image: stor.highloadcup.ru/phone_book/kiwi_flyer
+    build:
+      context: .
+    ports:
+      - 9081:9081
+    environment:
+      ws.endpoint: http://192.168.1.124:8081/castlemock/mock/soap/project/HWFm64/SoapServicePortSoap11
+      rs.endpoint: http://192.168.1.124:8081/castlemock/mock/rest/project/CUYhLE/application/T0vUtn
