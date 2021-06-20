@@ -1,0 +1,12 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <ns2:getUserResponse xmlns:ns2="http://hilariousstartups.ru/soap/gen">
+            <ns2:user>
+                <ns2:firstName>Sabyrzhan</ns2:firstName>
+                <ns2:lastName>Tynybayev</ns2:lastName>
+                <ns2:gender>Male</ns2:gender>
+            </ns2:user>
+        </ns2:getUserResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
