@@ -35,7 +35,7 @@ public class FakeWsEndpoint {
         rateLimiter.acquire();
         return CompletableFuture.supplyAsync(() -> {
             try {
-//                Thread.sleep(random.nextInt(5));
+                Thread.sleep(random.nextInt(5));
                 String content = IOUtils.toString(getClass().getClassLoader().getResource("response.xml"), StandardCharsets.UTF_8);
                 return content;
             } catch (Exception e) {
