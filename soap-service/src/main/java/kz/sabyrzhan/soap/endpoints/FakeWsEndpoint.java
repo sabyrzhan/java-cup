@@ -21,7 +21,7 @@ public class FakeWsEndpoint {
     public CompletableFuture<String> getUser(@RequestBody String body) {
         return completedFuture(null).thenApply(v -> {
             try {
-                Thread.sleep(random.nextInt(5));
+                //Thread.sleep(random.nextInt(5));
                 String content = IOUtils.toString(getClass().getClassLoader().getResource("response.xml"), StandardCharsets.UTF_8);
                 return content;
             } catch (Exception e) {
